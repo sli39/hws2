@@ -1,0 +1,72 @@
+.message {
+    /* Контейнер всего сообщения */
+
+}
+
+.imageAndText {
+    /* Обертка для аватара и текста сообщения */
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.imageAndText img {
+    /* Стили для аватара (изображения пользователя) */
+    border-radius: 100%;
+    width: 48px;
+    height: 48px
+}
+
+.text {
+    /* Контейнер для имени и текста сообщения */
+    border-radius:  16px 16px 16px 0;
+    max-width: 70%;
+    background-color:  #f5f7fb;
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 5px 20px 0 rgba(29, 33, 38, 0.03);
+    position: relative;
+    padding: 7px 8px;          /* внутренние отступы */
+    height: auto;
+
+}
+
+.text:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -12px; /*  хвостик слева */
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+
+    border-right-color: #f5f7fb; /* Цвет фона пузыря */
+    border-left: none;
+    border-bottom: none;
+}
+
+.name {
+    /* Имя пользователя */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.messageText {
+    /* Текст сообщения */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+
+}
+
+.time {
+    /* Время отправки сообщения */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #000;
+    margin-left: 10px;
+    margin-top: 5px;
+}

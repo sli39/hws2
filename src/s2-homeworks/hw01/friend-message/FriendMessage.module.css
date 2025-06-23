@@ -1,0 +1,82 @@
+.friendMessage {
+    /* Контейнер для сообщения друга */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Выравнивание вправо */
+    margin: 10px 0;
+}
+
+.friendImageAndText {
+    /* Обертка для аватара и текста друга */
+    display: flex;
+    flex-direction: row-reverse; /*  инвертирует порядок: сначала текст, потом аватар */
+    align-items: flex-end;
+    gap: 10px;
+    position: relative;
+}
+
+.friendImageAndText img {
+    /* Стили для аватара друга */
+    border-radius: 100%;
+    width: 48px;
+    height: 48px
+
+}
+
+.friendText {
+    /* Контейнер имени и текста сообщения друга */
+    border-radius:  16px 16px 0 16px;
+    background-color: #06c;
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 5px 20px 0 rgba(29, 33, 38, 0.03);
+    display: inline-block;         /* чтобы ширина и высота зависели от контента */
+    max-width: 70%;
+    position: relative;
+    padding: 7px 8px;          /* внутренние отступы */
+    height: auto;
+    text-align: right;
+}
+
+.friendText:after {
+    /* Декоративный элемент после текста (например, "хвостик" сообщения) */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -12px;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-left-color: #06c; /* Цвет пузыря */
+    border-right: none;
+    border-bottom: none;
+}
+
+.friendName {
+    /* Имя друга */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    text-align: right;           /* выравнивание текста по правому краю */
+    margin-bottom: 3px;          /* отступ снизу между именем и текстом */
+    word-break: break-word;
+}
+
+.friendMessageText {
+    /* Текст сообщения друга */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.friendTime {
+    /* Время отправки сообщения друга */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #000;
+    margin-right: 10px;
+    align-self: flex-end; /* выравнивание времени по правому краю */
+    margin-top: 5px;
+}
